@@ -1,0 +1,27 @@
+Source: bonnie++
+Section: utils
+Priority: optional
+Maintainer: Russell Coker <russell@coker.com.au>
+Standards-Version: 3.5.6
+Build-Depends: debhelper
+
+Package: bonnie++
+Architecture: any
+Depends: ${shlibs:Depends}
+Conflicts: zcav, bonnie, bonnie++
+Replaces: zcav, bonnie
+Provides: zcav, bonnie
+Description: Hard drive benchmark suite.
+ It is called Bonnie++ because it was based on the Bonnie program.  This
+ program also tests performance with creating large numbers of files.
+ Now includes zcav raw-read test program.  A modern hard drive will have more
+ sectors in the outer tracks because they are longer.  The hard drive will
+ have a number (often more than 8) of zones where each zone has the same
+ number of sectors (due to the need for an integral number of sectors per
+ track).  This program allows you to determine the levels of performance
+ provided by different zones and store them in a convenient format for gnuplot.
+ .
+ This is the experimental version.  It's not ready to replace the 1.x series
+ in time for Lenny but will be for Lenny+1.  The extra features (large file
+ support, better bon_csv2html, and support for zcav tests on multiple devices)
+ will make it worth using for some people.
