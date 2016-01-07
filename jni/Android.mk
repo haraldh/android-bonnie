@@ -9,6 +9,9 @@ LOCAL_MODULE:= bonnie
 
  LOCAL_CFLAGS +=		\
 	-D__ARM__			\
-	-DIS_ANDROID=1
+	-DIS_ANDROID=1		\
+	-fPIE
+
+LOCAL_LDFLAGS += -pie
 
 include $(BUILD_EXECUTABLE)
